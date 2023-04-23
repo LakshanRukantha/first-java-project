@@ -1,15 +1,20 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        //String data type
-        String name = "Lakshan Rukantha";
+        String name;
+        int byear, age;
 
-        //Int data type
-        int age = 22;
-
-        //Print output
-        System.out.println("Hello " + name);
-        System.out.println("You are " + age + " years old.");
-
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter your name: ");
+            name = sc.nextLine();
+            System.out.print("Enter your birth year: ");
+            byear = sc.nextInt();
+        }
+        
+        age = 2023 - byear;
+        
+        System.out.println("Hello " + name + ", You are " + age + " years old.");
     }
 }
